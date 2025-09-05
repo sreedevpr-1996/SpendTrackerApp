@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">SpendTracker</string>
+    <string name="continue_as">Continue as %1$s ?</string>
+    <string name="no_logged_in_user">No logged in user</string>
+    <string name="create_new_user">Create New User?</string>
+    <string name="or">OR</string>
+    <string name="empty">   </string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="email">Email</string>
+    <string name="current_balance">Current Balance</string>
+    <string name="submit">Submit</string>
+    <string name="user_created">User Created</string>
+    <string name="email_is_invalid">Email is invalid</string>
+    <string name="balance_is_invalid">Balance is invalid</string>
+    <string name="first_name_is_invalid">First name is invalid</string>
+    <string name="last_name_is_invalid">Last name is invalid</string>
+    <string name="hello_user">Hello %1$s</string>
+    <string name="currency">currency</string>
+    <string name="balance">"Balance : %1$s %2$s  "</string>
+    <string name="add_transaction">Add transaction</string>
+    <string name="income">Income</string>
+    <string name="expense">Expense</string>
+    <string name="amount">Amount</string>
+</resources>
