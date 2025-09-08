@@ -2,8 +2,9 @@ package com.example.spendtracker.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.spendtracker.database.tables.UserEntity
-import com.example.spendtracker.repositories.STUserRepo
+import com.example.spendtracker.common.constants.CommonConstants.emailRegex
+import com.example.spendtracker.data.repositories.STUserRepo
+import com.example.spendtracker.models.database.tables.UserEntity
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableSharedFlow
 import kotlinx.coroutines.flow.asSharedFlow
@@ -12,7 +13,6 @@ import javax.inject.Inject
 
 @HiltViewModel
 class STCreateUserViewModel @Inject constructor(private val userRepo: STUserRepo) : ViewModel() {
-    private val emailRegex = Regex("^[A-Za-z0-9+_.-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}$")
     private lateinit var lastNameValidationFailed: String
     private lateinit var firstNameValidationFailed: String
     private lateinit var balanceValidationFailed: String
@@ -23,6 +23,7 @@ class STCreateUserViewModel @Inject constructor(private val userRepo: STUserRepo
     fun createUser(userEntity: UserEntity?, onComplete: () -> Unit) {
         if (userEntity != null)
             viewModelScope.launch {
+                userRepo.deleteAllUsers()
                 userRepo.insertUser(userEntity)
                 onComplete()
             }

@@ -22,4 +22,5 @@
     <string name="income">Income</string>
     <string name="expense">Expense</string>
     <string name="amount">Amount</string>
+    <string name="select_date_and_time">Select Date and Time</string>
 </resources>

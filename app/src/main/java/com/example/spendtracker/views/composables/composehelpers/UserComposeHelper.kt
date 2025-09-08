@@ -1,4 +1,4 @@
-package com.example.spendtracker.views.composables.helpers
+package com.example.spendtracker.views.composables.composehelpers
 
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
@@ -6,7 +6,7 @@ import androidx.compose.ui.res.stringResource
 import androidx.compose.ui.unit.TextUnit
 import com.example.spendtracker.R
 import com.example.spendtracker.constants.SizeConstants
-import com.example.spendtracker.database.tables.UserEntity
+import com.example.spendtracker.models.database.tables.UserEntity
 
 @Composable
 fun WelcomeUser(
