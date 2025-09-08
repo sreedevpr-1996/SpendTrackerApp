@@ -1,8 +1,8 @@
-package com.example.spendtracker.repositories
+package com.example.spendtracker.data.repositories
 
 
-import com.example.spendtracker.database.dao.UserDao
-import com.example.spendtracker.database.tables.UserEntity
+import com.example.spendtracker.data.models.database.dao.UserDao
+import com.example.spendtracker.models.database.tables.UserEntity
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 import javax.inject.Singleton

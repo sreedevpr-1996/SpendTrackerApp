@@ -21,10 +21,10 @@ import androidx.navigation.NavHostController
 import com.example.spendtracker.R
 import com.example.spendtracker.sealedclasses.Screens
 import com.example.spendtracker.viewmodels.STCreateUserViewModel
-import com.example.spendtracker.views.composables.helpers.VerticalSpacer
-import com.example.spendtracker.views.composables.helpers.CustomButton
-import com.example.spendtracker.views.composables.helpers.EditInfo
-import com.example.spendtracker.views.composables.helpers.SetSnackBar
+import com.example.spendtracker.views.composables.composehelpers.VerticalSpacer
+import com.example.spendtracker.views.composables.composehelpers.CustomButton
+import com.example.spendtracker.views.composables.composehelpers.EditInfo
+import com.example.spendtracker.views.composables.composehelpers.SetSnackBar
 
 @Composable
 fun CreateUserScreen(navController: NavHostController) {

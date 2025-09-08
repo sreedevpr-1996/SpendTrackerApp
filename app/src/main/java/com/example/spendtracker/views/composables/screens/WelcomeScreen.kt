@@ -14,8 +14,8 @@ import androidx.navigation.NavHostController
 import com.example.spendtracker.constants.SizeConstants
 import com.example.spendtracker.sealedclasses.Screens
 import com.example.spendtracker.viewmodels.STMainViewModel
-import com.example.spendtracker.views.composables.helpers.CreateUser
-import com.example.spendtracker.views.composables.helpers.WelcomeUser
+import com.example.spendtracker.views.composables.composehelpers.CreateUser
+import com.example.spendtracker.views.composables.composehelpers.WelcomeUser
 
 @Composable
 fun WelcomeScreen(viewModel: STMainViewModel, navController: NavHostController) {

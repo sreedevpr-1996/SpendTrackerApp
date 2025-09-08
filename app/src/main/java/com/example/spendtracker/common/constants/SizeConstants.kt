@@ -34,4 +34,7 @@ object SizeConstants {
 
     val buttonBorderRadius: Int
         get() = 50
+
+    val sp23: TextUnit
+        get() = 23.sp
 }

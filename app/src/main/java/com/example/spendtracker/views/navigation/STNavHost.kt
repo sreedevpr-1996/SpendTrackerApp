@@ -23,7 +23,7 @@ fun STNavHost(navHostController: NavHostController, viewModel: STMainViewModel) 
             CreateUserScreen(navHostController)
         }
         composable(Screens.HomeScreen.route) {
-            HomeScreen(navHostController,viewModel)
+            HomeScreen(navHostController, viewModel)
         }
     }
 }
