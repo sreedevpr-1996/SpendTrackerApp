@@ -2,6 +2,9 @@ package com.example.spendtracker.viewmodels
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
+import com.example.spendtracker.common.constants.CommonConstants.ONE
+import com.example.spendtracker.common.constants.CommonConstants.TWO
+import com.example.spendtracker.common.constants.CommonConstants.ZERO
 import com.example.spendtracker.common.constants.CommonConstants.emailRegex
 import com.example.spendtracker.data.repositories.STUserRepo
 import com.example.spendtracker.models.database.tables.UserEntity
@@ -17,6 +20,7 @@ class STCreateUserViewModel @Inject constructor(private val userRepo: STUserRepo
     private lateinit var firstNameValidationFailed: String
     private lateinit var balanceValidationFailed: String
     private lateinit var emailValidationFailed: String
+    private lateinit var separator: String
     val failedValidations = mutableListOf<String>()
     private val _snackBarMessage = MutableSharedFlow<String>()
     val snackBarMessage = _snackBarMessage.asSharedFlow()
@@ -59,10 +63,10 @@ class STCreateUserViewModel @Inject constructor(private val userRepo: STUserRepo
 
     private fun buildValidationMessage(): String {
         return when (failedValidations.size) {
-            1 -> failedValidations[0]
-            2 -> "${failedValidations[0]} and ${failedValidations[1]}"
+            ONE -> failedValidations[ZERO]
+            TWO -> "${failedValidations[ZERO]} and ${failedValidations[ONE]}"
             else -> {
-                val allButLast = failedValidations.dropLast(1).joinToString(", ")
+                val allButLast = failedValidations.dropLast(ONE).joinToString(separator)
                 "$allButLast and ${failedValidations.last()}"
             }
         }
@@ -127,6 +131,10 @@ class STCreateUserViewModel @Inject constructor(private val userRepo: STUserRepo
         this.balanceValidationFailed = balanceValidationFailed
         this.firstNameValidationFailed = firstNameValidationFailed
         this.lastNameValidationFailed = lastNameValidationFailed
+    }
+
+    fun setSeparatorString(separatorString: String) {
+        separator = separatorString
     }
 
 }

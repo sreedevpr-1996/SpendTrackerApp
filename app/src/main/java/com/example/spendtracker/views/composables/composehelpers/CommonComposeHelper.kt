@@ -59,7 +59,7 @@ fun InteractiveTextWithArrow(
     modifier: Modifier,
 ) {
     Row(verticalAlignment = Alignment.CenterVertically) {
-        Text(text, fontSize = fontSize)
+        CustomText(text, fontSize = fontSize)
         Image(
             Icons.AutoMirrored.Filled.ArrowForward,
             stringResource(R.string.empty),

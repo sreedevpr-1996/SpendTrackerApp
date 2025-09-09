@@ -2,11 +2,11 @@ package com.example.spendtracker
 
 import android.content.Context
 import androidx.room.Room
+import com.example.spendtracker.data.models.database.dao.UserDao
+import com.example.spendtracker.data.repositories.STUserRepo
 import com.example.spendtracker.models.database.STDatabase
 import com.example.spendtracker.models.database.dao.TransactionsDao
-import com.example.spendtracker.models.database.dao.UserDao
 import com.example.spendtracker.repositories.STTransactionRepo
-import com.example.spendtracker.repositories.STUserRepo
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

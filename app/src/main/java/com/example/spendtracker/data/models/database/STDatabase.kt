@@ -2,8 +2,8 @@ package com.example.spendtracker.models.database
 
 import androidx.room.Database
 import androidx.room.RoomDatabase
+import com.example.spendtracker.data.models.database.dao.UserDao
 import com.example.spendtracker.models.database.dao.TransactionsDao
-import com.example.spendtracker.models.database.dao.UserDao
 import com.example.spendtracker.models.database.tables.CategoryEntity
 import com.example.spendtracker.models.database.tables.TransactionHistoryEntity
 import com.example.spendtracker.models.database.tables.UserEntity

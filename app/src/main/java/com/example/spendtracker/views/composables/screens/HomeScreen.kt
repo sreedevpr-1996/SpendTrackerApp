@@ -50,7 +50,7 @@ fun HomeScreen(navHostController: NavHostController, mainViewModel: STMainViewMo
             Card(
                 modifier = Modifier
                     .padding(
-                        top = innerPadding.calculateTopPadding(),
+                        top = innerPadding.calculateTopPadding() + SizeConstants.dp08,
                         start = SizeConstants.dp12,
                         end = SizeConstants.dp12,
                         bottom = SizeConstants.dp08

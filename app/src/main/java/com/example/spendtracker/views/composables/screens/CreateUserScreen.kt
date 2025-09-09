@@ -31,6 +31,7 @@ fun CreateUserScreen(navController: NavHostController) {
     val viewModel = hiltViewModel<STCreateUserViewModel>()
 
     val emptyString: String = stringResource(R.string.empty)
+    val separatorString: String = stringResource(R.string.separator)
     val createUserFirstName = rememberSaveable { mutableStateOf(emptyString) }
     val createUserLastName = rememberSaveable { mutableStateOf(emptyString) }
     val createUserBalance = rememberSaveable { mutableStateOf(emptyString) }
@@ -46,6 +47,7 @@ fun CreateUserScreen(navController: NavHostController) {
         lastNameValidationFailed,
         balanceValidationFailed
     )
+    viewModel.setSeparatorString(separatorString)
     val snackBarHostState = remember { SnackbarHostState() }
     var disableButton by remember { mutableStateOf(false) }
 
