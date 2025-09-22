@@ -6,8 +6,8 @@ import androidx.room.Insert
 import androidx.room.Query
 import androidx.room.Transaction
 import com.example.spendtracker.constants.TableConstants
-import com.example.spendtracker.models.TransactionWithUserAndCategory
-import com.example.spendtracker.models.database.tables.TransactionHistoryEntity
+import com.example.spendtracker.data.models.TransactionWithUserAndCategory
+import com.example.spendtracker.data.models.database.tables.TransactionHistoryEntity
 import kotlinx.coroutines.flow.Flow
 
 @Dao

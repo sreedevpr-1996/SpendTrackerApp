@@ -1,10 +1,10 @@
-package com.example.spendtracker.models
+package com.example.spendtracker.data.models
 
 import androidx.room.Embedded
 import androidx.room.Relation
 import com.example.spendtracker.constants.TableConstants
-import com.example.spendtracker.models.database.tables.CategoryEntity
-import com.example.spendtracker.models.database.tables.TransactionHistoryEntity
+import com.example.spendtracker.data.models.database.tables.CategoryEntity
+import com.example.spendtracker.data.models.database.tables.TransactionHistoryEntity
 import com.example.spendtracker.models.database.tables.UserEntity
 
 data class TransactionWithUserAndCategory(

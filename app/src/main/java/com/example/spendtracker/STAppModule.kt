@@ -2,11 +2,11 @@ package com.example.spendtracker
 
 import android.content.Context
 import androidx.room.Room
+import com.example.spendtracker.data.models.database.STDatabase
 import com.example.spendtracker.data.models.database.dao.UserDao
 import com.example.spendtracker.data.repositories.STUserRepo
-import com.example.spendtracker.models.database.STDatabase
 import com.example.spendtracker.models.database.dao.TransactionsDao
-import com.example.spendtracker.repositories.STTransactionRepo
+import com.example.spendtracker.data.repositories.STTransactionRepo
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn
@@ -38,6 +38,9 @@ object STAppModule {
 
     @Provides
     fun provideTransactionsDao(db: STDatabase) = db.transactionsDao()
+
+    @Provides
+    fun provideCategoryDao(db: STDatabase) = db.categoryDao()
 
 
 }
